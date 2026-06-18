@@ -280,17 +280,38 @@
         });
     });
     
+    const sections = document.querySelectorAll('.section');
+    const navBtns = document.querySelectorAll('.nav-btn');
+    
+    let isScrolling = false;
+    let scrollTimeout;
+    
     window.addEventListener('scroll', () => {
-        const sections = document.querySelectorAll('.section');
-        const navBtns = document.querySelectorAll('.nav-btn');
+        isScrolling = true;
+        clearTimeout(scrollTimeout);
+        
+        scrollTimeout = setTimeout(() => {
+            isScrolling = false;
+        }, 100);
+        
         let current = '';
+        const scrollPosition = window.pageYOffset + 150;
         
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 150;
-            if (window.pageYOffset >= sectionTop) {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
                 current = section.getAttribute('id');
             }
         });
+        
+        if (current === '') {
+            const lastSection = sections[sections.length - 1];
+            if (window.pageYOffset + window.innerHeight >= document.documentElement.scrollHeight - 50) {
+                current = lastSection.getAttribute('id');
+            }
+        }
         
         navBtns.forEach(btn => {
             btn.classList.remove('active');
@@ -325,9 +346,13 @@
                 const cards = entry.target.querySelectorAll('.feature-card, .guide-card, .plan-card');
                 cards.forEach((card, i) => {
                     setTimeout(() => {
-                        card.style.animation = 'fadeSlide 0.6s ease forwards';
-                        card.style.opacity = '0';
-                    }, i * 100);
+                        card.classList.add('visible');
+                    }, i * 150);
+                });
+            } else {
+                const cards = entry.target.querySelectorAll('.feature-card, .guide-card, .plan-card');
+                cards.forEach((card) => {
+                    card.classList.remove('visible');
                 });
             }
         });
