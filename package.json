@@ -1,0 +1,12 @@
+{
+    "name": "breaking-sod-website",
+    "version": "1.0.0",
+    "description": "Official website for Breaking Sod game",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
