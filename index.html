@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Breaking Sod</title>
+    <link rel="icon" href="images/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="vanta-bg"></div>
+    
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <img src="images/icon.svg" alt="Breaking Sod" class="logo-icon">
+                <span class="logo-text">Breaking Sod</span>
+            </div>
+            <nav class="header__nav">
+                <a class="nav-btn active" href="#home">Главная</a>
+                <a class="nav-btn" href="#features">Особенности</a>
+                <a class="nav-btn" href="#guides">Гайды</a>
+                <a class="nav-btn" href="#plans">Планы</a>
+                <a class="nav-btn" href="#videos">Видео</a>
+                <a class="nav-btn" href="#support">Поддержать</a>
+                <a class="nav-btn" href="#dev">Разработчик</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="section hero-section">
+            <div class="container">
+                <div class="hero-card">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Breaking Sod</h1>
+                        <p class="hero-description">Экономический симулятор фермерства с подпольными экспериментами, цепочками переработки и динамичной торговлей.</p>
+                        <div class="hero-cta">
+                            <a href="#" class="button button-primary">Играть в Steam</a>
+                            <a href="#plans" class="button button-secondary">Узнать больше</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="images/game-screenshot1.jpg" alt="Breaking Sod Gameplay">
+                    </div>
+                </div>
+                <div class="gallery-wrapper">
+                    <h2 class="gallery-title">Скриншоты</h2>
+                    <div class="gallery-container">
+                        <div class="gallery-track" id="galleryTrack"></div>
+                        <button class="gallery-nav prev" id="galleryPrev">‹</button>
+                        <button class="gallery-nav next" id="galleryNext">›</button>
+                    </div>
+                    <div class="gallery-dots" id="galleryDots"></div>
+                    <div class="gallery-caption" id="galleryCaption"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section features-section">
+            <div class="container">
+                <h2 class="section-title">Ключевые особенности</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Фермерство</h3>
+                        <p>Сажайте и выращивайте 3 вида растений: Green Weed, Purple Haze и White Widow.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Цепочка переработки</h3>
+                        <p>Превращайте сырье в ценные продукты: от измельчения до упаковки.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Экономика</h3>
+                        <p>Управляйте наличными и деньгами на карте. Торгуйте с покупателями.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Подвал</h3>
+                        <p>Раскапывайте подземелье в поисках редких ресурсов.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Статы игрока</h3>
+                        <p>Следите за энергией и бодростью. Не забывайте спать.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Консоль разработчика</h3>
+                        <p>Встроенная консоль для тестирования и отладки.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="guides" class="section guides-section">
+            <div class="container">
+                <h2 class="section-title">Руководства</h2>
+                <div class="guides-grid">
+                    <div class="guide-card">
+                        <h3>Растения</h3>
+                        <ul>
+                            <li><strong>Green Weed:</strong> Быстрый рост, низкая цена ($15). Требует 1 воды.</li>
+                            <li><strong>Purple Haze:</strong> Средний рост, хорошая цена ($30). Требует 2 воды.</li>
+                            <li><strong>White Widow:</strong> Медленный рост, высокая цена ($50). Требует 3 воды.</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <h3>Здания</h3>
+                        <ul>
+                            <li><strong>Crop:</strong> Грядка для посадки.</li>
+                            <li><strong>Well:</strong> Источник воды для полива.</li>
+                            <li><strong>PC:</strong> Доступ к магазину семян.</li>
+                            <li><strong>ATM:</strong> Обмен наличных на карту.</li>
+                            <li><strong>Graver / Dryer / Wrapper:</strong> Цепочка переработки.</li>
+                        </ul>
+                    </div>
+                    <div class="guide-card">
+                        <h3>Советы</h3>
+                        <ul>
+                            <li>Следите за уровнем воды у растений.</li>
+                            <li>Не давайте растениям засохнуть.</li>
+                            <li>Используйте переработку для максимальной прибыли.</li>
+                            <li>Торгуйте с покупателями.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="plans" class="section plans-section">
+            <div class="container">
+                <h2 class="section-title">План развития</h2>
+                <div class="plans-grid">
+                    <div class="plan-card">
+                        <h3>Что уже реализовано</h3>
+                        <ul>
+                            <li>Ферминг (3 растения, рост, полив, сбор)</li>
+                            <li>Переработка (Graver / Dryer / Wrapper, 3 уровня)</li>
+                            <li>Подвал (копка земли, ресурсы)</li>
+                            <li>Покупатели (торг, раздражение, цена)</li>
+                            <li>Консоль разработчика, сохранения, тултипы</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card">
+                        <h3>Подозрительность и копы</h3>
+                        <ul>
+                            <li>25% - повышенный шанс обыска</li>
+                            <li>50% - штрафы</li>
+                            <li>75% - полиция избивает</li>
+                            <li>100% - ОМОН, конфискация, тюрьма</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card">
+                        <h3>UI и качество жизни</h3>
+                        <ul>
+                            <li>Иконки для всех предметов</li>
+                            <li>Удаление зданий, мусорка</li>
+                            <li>Загрузочные экраны</li>
+                            <li>Z-index для всех построек</li>
+                            <li>Сохранение позиции игрока</li>
+                            <li>Редактор персонажа</li>
+                            <li>Звуки, музыка, анимации</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card">
+                        <h3>Подвал и стройка</h3>
+                        <ul>
+                            <li>Полноценная стройка в подвале</li>
+                            <li>Система освещения</li>
+                            <li>Риск обвала без опор</li>
+                            <li>Добыча камней и деревьев</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card">
+                        <h3>Карты и здания</h3>
+                        <ul>
+                            <li>Вторая карта для выращивания</li>
+                            <li>Город: банк, больница, казино</li>
+                            <li>Аренда торговой точки</li>
+                            <li>Календарь как отдельный UI</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card">
+                        <h3>Геймплей и прогресс</h3>
+                        <ul>
+                            <li>Исследования</li>
+                            <li>Сюжетные миссии</li>
+                            <li>Отношения с NPC</li>
+                            <li>Подземелье с монстрами</li>
+                            <li>Рыбалка</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card">
+                        <h3>Растения и ферминг</h3>
+                        <ul>
+                            <li>Увядание выросших растений</li>
+                            <li>Зависимость роста от игрового времени</li>
+                            <li>Удобрения</li>
+                            <li>Новые культуры</li>
+                            <li>Сезонность и погода</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card">
+                        <h3>Экономика и преступность</h3>
+                        <ul>
+                            <li>Гангстеры</li>
+                            <li>Телохранители</li>
+                            <li>Закладки и тайники</li>
+                            <li>Скупщик ресурсов</li>
+                            <li>Криптобиржа</li>
+                            <li>Наём сотрудников</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card">
+                        <h3>Дополнительно</h3>
+                        <ul>
+                            <li>Телефон в игре</li>
+                            <li>Ссылки на соцсети</li>
+                            <li>Credits с перечислением ассетов</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card">
+                        <h3>Выход на Steam</h3>
+                        <ul>
+                            <li>Целевая аудитория: фанаты экономических симуляторов</li>
+                            <li>Реклама: TikTok, YouTube, Telegram, Steam Next Fest</li>
+                            <li>Монетизация: однократная покупка, DLC</li>
+                            <li>Аналоги: Weedcraft Inc, Drug Dealer Simulator</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="videos" class="section videos-section">
+            <div class="container">
+                <h2 class="section-title">Видео</h2>
+                <div class="video-gallery-wrapper">
+                    <div class="video-gallery-container">
+                        <div class="video-gallery-track" id="videosTrack"></div>
+                        <button class="gallery-nav prev" id="videosPrev">‹</button>
+                        <button class="gallery-nav next" id="videosNext">›</button>
+                    </div>
+                    <div class="gallery-dots" id="videosDots"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="support" class="section support-section">
+            <div class="container">
+                <div class="coming-soon">
+                    <h2>In Development</h2>
+                    <p>Страница поддержки находится в разработке</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="dev" class="section dev-section">
+            <div class="container">
+                <div class="coming-soon">
+                    <h2>In Development</h2>
+                    <p>Страница разработчика находится в разработке</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Breaking Sod. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.fog.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
